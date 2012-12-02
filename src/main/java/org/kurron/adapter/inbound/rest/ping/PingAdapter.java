@@ -17,7 +17,7 @@ public class PingAdapter {
         System.err.println("PingAdapter constructed!");
     }
 
-    @RequestMapping( method = RequestMethod.GET, produces = "test/plain" )
+    @RequestMapping( method = RequestMethod.GET, produces = "text/plain" )
     public ResponseEntity<String> currentType()
     {
         return new ResponseEntity<String>( Long.toHexString( System.currentTimeMillis() ) , HttpStatus.OK );
