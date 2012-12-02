@@ -3,12 +3,6 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-    <!-- the default spring profile to use -->
-    <context-param>
-        <param-name>spring.profiles.default</param-name>
-        <param-value>development</param-value>
-    </context-param>
-
     <!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -28,10 +22,6 @@
             <param-name>contextConfigLocation</param-name>
             <!-- we want to just have everything in the root context, so we set this to empty -->
             <param-value/>
-        </init-param>
-        <init-param>
-            <param-name>spring.profiles.default</param-name>
-            <param-value>development</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
