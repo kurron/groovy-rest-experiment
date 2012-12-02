@@ -8,6 +8,10 @@ repositories {
 }
 
 configurations {
+    all*.exclude group: 'commons-logging'
+    all*.exclude group: 'log4j'
+    all*.exclude group: 'slf4j'
+
     sourceArchives {
         description = 'Artifact that contains the source code of the dependencies.'
     }
@@ -32,6 +36,7 @@ dependencies {
     compile "org.springframework:spring-webmvc:${springFrameworkVersion}"
     compile "org.slf4j:slf4j-api:${slf4jVersion}"
     compile "org.slf4j:slf4j-ext:${slf4jVersion}"
+    compile "org.codehaus.jackson:jackson-mapper-asl:${jacksonVersion}"
 
     testCompile "org.springframework:spring-test:${springFrameworkVersion}"
     testCompile "junit:junit:${junitVersion}"
@@ -70,6 +75,7 @@ dependencies {
     sourceArchives "ch.qos.logback:logback-classic:${logbackVersion}:sources"
     sourceArchives "ch.qos.logback:logback-core:${logbackVersion}:sources"
     sourceArchives "cglib:cglib-nodep:${cglibVersion}:sources"
+    sourceArchives "org.codehaus.jackson:jackson-mapper-asl:${jacksonVersion}:sources"
 
 }
 
